@@ -294,6 +294,7 @@ presence.on('UpdateData', async () => {
           state: strings.home,
         },
       }
+      if (location.pathname.endsWith("/chat")) return;
 
       if (showBrowsing) {
         for (const [k, v] of Object.entries(statics)) {
